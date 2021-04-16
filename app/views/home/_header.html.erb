@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg py-4 navbar-dark nav-wrapper" style="background-color: #377Bc2;">
   <div class="container-fluid">
-    <%= link_to 'Daily Outlay', root_path, class:"navbar-brand"%>
+    <%= link_to 'Daily Outlay', root_path, class:"navbar-brand logo"%>
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -12,13 +12,50 @@
         <%= link_to 'Groups', groups_path, class:"nav-link"%>
         </li> 
       </ul>
+
+       
+
+
+
+
+
       <form class="d-flex">
+        
+          
+         <%  if user_signed_in?  %>
+
+
+
+<li style="list-style: none;" class="nav-item">
+    <%= link_to (current_user.name), class:"navbar-brand" do %>
+      <%= image_tag avatar_url_for(current_user, size: 24), class: "rounded-circle mr-1" %>
+      <%= current_user.name %>
+    <% end %>
+</li>
+
+
+
+
+
         <li style="list-style: none;" class = "nav-item">
+          <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class:"navbar-brand"%>
+        </li>
+
+        <li style="list-style: none;" class = "nav-item">
+          <%= link_to "Edit Profile", edit_user_registration_path, class:"nav_link navbar-brand"%>
+        </li>
+
+
+          <% else %>
+
+          <li style="list-style: none;" class = "nav-item">
           <%= link_to "Register", new_user_registration_path, class:"nav_link navbar-brand"%>
         </li>
         <li style="list-style: none;" class = "nav-item">
           <%= link_to "Login", new_user_session_path, class:"nav_link navbar-brand"%>
         </li>
+
+          <% end %>
       </form>
     </div>
   </div>
