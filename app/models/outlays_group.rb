@@ -1,0 +1,2 @@
+class OutlaysGroup < ApplicationRecord
+end
