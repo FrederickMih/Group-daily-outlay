@@ -1,0 +1,2 @@
+class Outlay < ApplicationRecord
+end

@@ -1,2 +1,24 @@
-<h1>Users#profile</h1>
-<p>Find me in app/views/users/profile.html.erb</p>
+<div class="bg-primary vh-100 text-white">
+  <div class="py-3 text-center">
+    <%= display_avatar(@user) %>
+    <h1>Welcome, <%= @user.name %></h1>
+  </div>
+  <ul class="list-group my-5">
+    <li class="list-group-item bg-primary">
+    <i class="fas fa-money-bill mr-3"></i>
+      <%= link_to "All My Expenses", expenses_path, class: 'text-white' %>
+    </li>
+    <li class="list-group-item bg-primary">
+      <i class="fas fa-external-link-alt mr-3"></i>
+      <%= link_to 'All My External Expenses', expenses_index_no_group_path, class: 'text-white' %>
+    </li>
+    <li class="list-group-item bg-primary">
+      <i class="fas mr-3 fa-users"></i>
+      <%= link_to 'All groups', groups_path, class: 'text-white' %>
+    </li>
+    <li class="list-group-item bg-primary">
+      <i class="fas mr-3 fa-sign-out-alt"></i>
+      <%= link_to 'Logout', logout_path, method: 'delete', class: 'text-white' %>
+    </li>
+  </ul>
+</div>
