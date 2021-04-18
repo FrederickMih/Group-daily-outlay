@@ -24,19 +24,6 @@
           
          <%  if user_signed_in?  %>
 
-
-
-<li style="list-style: none;" class="nav-item">
-    <%= link_to (current_user.name), class:"navbar-brand" do %>
-      <%= image_tag avatar_url_for(current_user, size: 24), class: "rounded-circle mr-1" %>
-      <%= current_user.name %>
-    <% end %>
-</li>
-
-
-
-
-
         <li style="list-style: none;" class = "nav-item">
           <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class:"navbar-brand"%>
         </li>

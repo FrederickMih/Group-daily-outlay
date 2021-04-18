@@ -5,7 +5,9 @@ class Group < ApplicationRecord
 
    validates :name, presence: true, uniqueness: true, length: { minimum: 2, maximum: 50 }
    has_one_attached :icon, dependent: :destroy
-   validates :icon, blob: { content_type: :image }
+   # validates :icon, blob: { content_type: :image }
 
-  
+   def display_image
+      icon.variant(resize_to_limit: [500, 500])
+   end
 end

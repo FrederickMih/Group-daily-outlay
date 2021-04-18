@@ -3,11 +3,12 @@ class GroupsController < ApplicationController
 
   # GET /groups or /groups.json
   def index
-    @groups = Group.all
+    @groups = Group.all.include(:user).paginate(page: params[:page], par_page: 3).order(:name).with_attached_icon
   end
 
   # GET /groups/1 or /groups/1.json
   def show
+    @group = Group.includes(:outlays, :user).find(params[:id])
   end
 
   # GET /groups/new
@@ -21,16 +22,15 @@ class GroupsController < ApplicationController
 
   # POST /groups or /groups.json
   def create
-    @group = Group.new(group_params)
+    group = Group.new(group_params)
+    group.user_id = current_user.id
 
-    respond_to do |format|
-      if @group.save
-        format.html { redirect_to @group, notice: "Group was successfully created." }
-        format.json { render :show, status: :created, location: @group }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @group.errors, status: :unprocessable_entity }
-      end
+    if group.save
+      flash[:success] = ['Group has been Added!']
+      redirect_to groups_path
+    else
+      flash[:danger] = group.errors.full_messages
+      redirect_back(fallback_location: new_group_path)
     end
   end
 
@@ -64,6 +64,6 @@ class GroupsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def group_params
-      params.require(:group).permit(:name, :user_id)
+      params.require(:group).permit(:name, :icon)
     end
 end

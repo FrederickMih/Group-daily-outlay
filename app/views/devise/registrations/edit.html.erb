@@ -1,4 +1,5 @@
 <div class="card">
+
   <div class="card-header">
     <h4>Edit Profile <% resource_name.to_s.humanize %></h4>
   </div>
@@ -6,28 +7,14 @@
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="d-flex align-items-center justify-content-center mt-5">
-  <div class="media mr-5 align-self-start">
-    <%= image_tag avatar_url_for(current_user, size: 40), class: "rounded-circle mr-4" %>
+
+
+
+
+ <div class="field form-group">
+    <%= f.label :avatar %><br />
+    <%= f.file_field :avatar, autofocus: true, autocomplete: "avatar",  class:"form-control", placeholder:"Avatar" %>
   </div>
-  <div class="media">
-    <div class="media-body">
-      <div class="d-flex flex-row align-items-center justify-content-between">
-        <h1><%= @user.name %></h1>
-        <%= link_to "Edit", edit_user_registration_path, class: "ml-3 btn btn-primary\
-         btn-sm" if current_user.id == @user.id %>
-
-      </div>
-    </div>
-  </div>
-</div>
-
-
-  <div class="field form-group">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "", class:"form-control", placeholder:"Name" %>
-  </div>
-
 
 
   <div class="field form-group">
@@ -59,7 +46,7 @@
   </div>
    <br/>
   <div class="actions">
-    <%= f.submit "Update", class:'btn btn-primary' %>
+    <%= f.submit "Update", class:'btn btn-secondary' %>
   </div>
 <% end %>
 <br/><br/>

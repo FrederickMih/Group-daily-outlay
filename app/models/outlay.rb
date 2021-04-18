@@ -3,6 +3,6 @@ class Outlay < ApplicationRecord
    has_many :outlays_groups, dependent: :destroy
    has_many :groups, through: :outlays_groups
 
-   validates :name, presence: true, uniquenesss: true, length: { maximum: 5O }
+   validates :name, presence: true
    validates :amount, presence: true, numericality: {less_than: 20_000}
 end

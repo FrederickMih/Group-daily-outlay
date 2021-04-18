@@ -1,5 +1,10 @@
 require "active_support/core_ext/integer/time"
 
+require File.expand_path('../application', __FILE__)
+require 'carrierwave/orm/activerecord'
+
+
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -38,7 +43,10 @@ Rails.application.configure do
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
-  config.active_storage.service = :local
+  config.active_storage.service = :cloudinary
+
+  CLOUDINARY_URL="cloudinary://677957218387247:1V136ij22eN8rgIHjUvlxgfz8C8@dxc1u5evw"
+  # config.active_storage.service = :local
   config.gem 'gravatar_image_tag'
 
   # Mount Action Cable outside main process or domain.

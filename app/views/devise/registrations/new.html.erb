@@ -8,11 +8,6 @@
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field form-group">
-    <%= f.label "Profile Photo" %><br />
-    <%= f.file_field :avatar, autofocus: true, autocomplete: "profile", class:"form-control", placeholder:"Browse Image" %>
-  </div>
-
     <div class="field form-group">
     <%= f.label :name %><br />
     <%= f.text_field :name, autofocus: true, autocomplete: "name", class:"form-control", placeholder:"Name" %>
