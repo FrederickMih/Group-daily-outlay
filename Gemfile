@@ -18,6 +18,8 @@ gem 'cloudinary', require: false
 gem 'activestorage-cloudinary-service'
 gem 'image_processing', '~> 1.12', '>= 1.12.1'
 gem 'figaro'
+gem 'will_paginate'
+gem 'will_paginate-bootstrap'
 
 
 gem 'mini_magick'
@@ -39,9 +41,10 @@ group :development do
   gem 'spring'
 end
 
-group :test dogem install spring-watcher-listen
+group :test do
   gem 'capybara', '>= 3.26'
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
+
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

@@ -453,6 +453,9 @@ GEM
     websocket-driver (0.7.3)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    will_paginate (3.3.0)
+    will_paginate-bootstrap (1.0.2)
+      will_paginate (>= 3.0.3)
     xml-simple (1.1.8)
     xmlrpc (0.3.2)
       webrick
@@ -494,6 +497,8 @@ DEPENDENCIES
   web-console (>= 4.1.0)
   webdrivers
   webpacker (~> 5.0)
+  will_paginate
+  will_paginate-bootstrap
 
 RUBY VERSION
    ruby 3.0.0p0

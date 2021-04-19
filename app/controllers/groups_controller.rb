@@ -2,9 +2,9 @@ class GroupsController < ApplicationController
   before_action :set_group, only: %i[ show edit update destroy ]
 
   # GET /groups or /groups.json
-  def index
-    @groups = Group.all.include(:user).paginate(page: params[:page], par_page: 3).order(:name).with_attached_icon
-  end
+  # def index
+  #   @groups = Group.all.include(:user).paginate(page: params[:page], par_page: 3).order(:name).with_attached_icon
+  # end
 
   # GET /groups/1 or /groups/1.json
   def show
