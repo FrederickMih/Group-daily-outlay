@@ -1,17 +1,16 @@
-<div class="bg-primary vh-100 text-white">
-  <div class="py-3 text-center">
+<div class=" vh-100 text-white" style="background-color: #377Bc2;">
+  <div class="py-2 text-center">
 
-   
-<%=image_tag @user.avatar_url.to_s%>
+   <div>
+    <%= show_avatar(@user)%>
+    <h1><%= @user.name %></h1>
+   </div>
 
-
-    
-    <h1>Welcome, <%= @user.name %></h1>
   </div>
-  <ul class="list-group my-5">
+  <ul class="list-group my-5" style="background-color: #377Bc2;">
     <li class="list-group-item bg-primary">
-    <i class="fas fa-money-bill mr-3"></i>
-      <%= link_to "All My Expenses", outlays_path, class: 'text-white' %>
+    <i class="fas fa-money-bill mr-1"></i>
+      <%= link_to "All My Expenses",  outlays_path, class: 'text-white' %>
     </li>
     <li class="list-group-item bg-primary">
       <i class="fas fa-external-link-alt mr-3"></i>
@@ -21,8 +20,9 @@
       <i class="fas mr-3 fa-users"></i>
       <%= link_to 'All groups', groups_path, class: 'text-white' %>
     </li>
-    <li style="list-style: none;" class = "nav-item">
-          <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class:"navbar-brand"%>
+    <li class="list-group-item bg-primary">
+      <i class="fas fa-external-link-alt mr-3"></i>
+          <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'text-white'%>
       </li>
 
     </li>

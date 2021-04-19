@@ -10,5 +10,8 @@ module ApplicationHelper
   #     hash = Digest::MD5.hexdigest(user.name.downcase)
   #     "https://secure.gravatar.com/avatar/#{hash}.png?s=#{size}"
   #   end
-#  end
+#  
+
+
+
 end

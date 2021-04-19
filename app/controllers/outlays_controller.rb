@@ -31,6 +31,7 @@ class OutlaysController < ApplicationController
     end
   end
 
+
   private
 
   def outlay_params
