@@ -1,4 +1,4 @@
-<div class=" vh-100 text-white" style="background-color: #377Bc2;">
+<div class=" vh-100 text-white" style="background-color: #377Bc3;">
   <div class="py-2 text-center">
 
    <div>
@@ -9,21 +9,21 @@
   </div>
   <ul class="list-group my-5" style="background-color: #377Bc2;">
     <li class="list-group-item bg-primary">
-    <i class="fas fa-money-bill mr-1"></i>
+    <img src="https://img.icons8.com/color/48/000000/cashbook.png"/>
       <%= link_to "All My Expenses",  outlays_path, class: 'text-white' %>
     </li>
     <li class="list-group-item bg-primary">
-      <i class="fas fa-external-link-alt mr-3"></i>
+      <img src="https://img.icons8.com/offices/48/000000/exterior.png"/>
       <%= link_to 'All My External Expenses', outlay_index_path, class: 'text-white' %>
     </li>
     <li class="list-group-item bg-primary">
-      <i class="fas mr-3 fa-users"></i>
+     <img src="https://img.icons8.com/fluent/48/000000/group-foreground-selected.png"/>
       <%= link_to 'All groups', groups_path, class: 'text-white' %>
     </li>
-    <li class="list-group-item bg-primary">
+    <%# <li class="list-group-item bg-primary">
       <i class="fas fa-external-link-alt mr-3"></i>
           <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'text-white'%>
-      </li>
+      <%# </li> %> 
 
     </li>
   </ul>
