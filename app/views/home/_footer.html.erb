@@ -1,1 +1,27 @@
-<%# <h1>footer</h1> %>
+<footer class="page-footer light-blue darken-3">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text brand-logo">Outlay</h5>
+        <p class="grey-text text-lighten-4">
+          An app to Track your expenses.
+        </p>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5>
+          <%= link_to 'Profile', root_path, class: 'white-text' %>
+        </h5>
+        <ul>
+          <li><%= link_to 'All My Daily Outlays', outlays_path, class: 'grey-text text-lighten-3' %></li>
+          <li><%= link_to 'AAll My External Outlays', outlays_index_no_group_path, class: 'grey-text text-lighten-3' %></li>
+          <li><%= link_to 'All groups', groups_path, class: 'grey-text text-lighten-3' %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      © 2021 Mih Frederick
+    </div>
+  </div>
+</footer>

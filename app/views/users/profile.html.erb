@@ -1,30 +1,30 @@
-<div class=" vh-100 text-white" style="background-color: #377Bc3;">
-  <div class="py-2 text-center">
 
-   <div>
+
+
+<div class="card">
+  <div class="card-header">
+    <div class = "text-center">
     <%= show_avatar(@user)%>
     <h1><%= @user.name %></h1>
    </div>
-
   </div>
-  <ul class="list-group my-5" style="background-color: #377Bc2;">
+  <div class="card-body card text-left ">
+    <ul class="list-group list-group-flush ">
     <li class="list-group-item bg-primary">
     <img src="https://img.icons8.com/color/48/000000/cashbook.png"/>
-      <%= link_to "All My Expenses",  outlays_path, class: 'text-white' %>
+      <%= link_to "All My Daily Outlays",  outlays_path, class: 'text-white' %>
     </li>
     <li class="list-group-item bg-primary">
       <img src="https://img.icons8.com/offices/48/000000/exterior.png"/>
-      <%= link_to 'All My External Expenses', outlays_index_no_group_path, class: 'text-white' %>
+      <%= link_to 'All My External Outlays', outlays_index_no_group_path, class: 'text-white' %>
     </li>
     <li class="list-group-item bg-primary">
      <img src="https://img.icons8.com/fluent/48/000000/group-foreground-selected.png"/>
       <%= link_to 'All groups', groups_path, class: 'text-white' %>
     </li>
-    <%# <li class="list-group-item bg-primary">
-      <i class="fas fa-external-link-alt mr-3"></i>
-          <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'text-white'%>
-      <%# </li> %> 
 
     </li>
   </ul>
+  </div>
+  
 </div>
