@@ -1,5 +1,5 @@
 class OutlaysController < ApplicationController
-  #  before_action :logged_in_or_back
+     before_action :authenticate_user!
 
   def new
     @outlay = Outlay.new
@@ -11,7 +11,7 @@ class OutlaysController < ApplicationController
   end
 
   def index_no_group
-    @outlays= Outlay.includes(groups: [icon_attachment: :blob]).paginate(page: params[:page], per_page: 3)
+    @outlays = Outlay.includes(groups: [icon_attachment: :blob]).paginate(page: params[:page], per_page: 3)
       .where('author_id=?', current_user.id).left_outer_joins(:groups).where('groups.id IS NULL')
     render 'index'
   end
