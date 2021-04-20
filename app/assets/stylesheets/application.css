@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-/* @import "bootstrap";
-@import "bootstrap-multiselect" */
+@import "bootstrap";
+@import "bootstrap-multiselect"
 .logo {
   font-family: 'Pacifico', cursive;
 }
@@ -10,3 +10,7 @@
    font-family: 'Pacifico', cursive;
    font-size: 5rem;
 }
+ .padding-for-new-entry{
+   padding-bottom: 100px;
+ }
+
