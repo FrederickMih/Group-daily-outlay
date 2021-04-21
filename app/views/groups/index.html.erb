@@ -6,7 +6,7 @@
   <%= will_paginate @post,renderer: BootstrapPagination::Rails %>
 </div>
 <div class="padding-for-new-entry">
-  <%= render @forms %>
+  <%= render 'groups/form' %>
 </div>
 <div class="bg-primary py-3" >
   <%= link_to 'New Group', new_group_path, type: "button", class: "btn btn-outline-light w-75 mx-auto d-block py-3" %>
