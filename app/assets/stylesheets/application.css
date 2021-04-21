@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import "bootstrap";
-@import "bootstrap-multiselect"
+@import "bootstrap-multiselect";
+
 .logo {
   font-family: 'Pacifico', cursive;
 }
