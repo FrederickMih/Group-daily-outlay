@@ -103,6 +103,7 @@ GEM
       aws_cf_signer
       rest-client (>= 2.0.0)
     concurrent-ruby (1.1.8)
+    content_disposition (1.0.0)
     crass (1.0.6)
     devise (4.7.3)
       bcrypt (~> 3.0)
@@ -117,6 +118,8 @@ GEM
     dotenv-rails (2.7.6)
       dotenv (= 2.7.6)
       railties (>= 3.2)
+    down (5.2.0)
+      addressable (~> 2.5)
     dry-inflector (0.2.0)
     erubi (1.10.0)
     excon (0.80.1)
@@ -410,6 +413,9 @@ GEM
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
     semantic_range (3.0.0)
+    shrine (3.3.0)
+      content_disposition (~> 1.0)
+      down (~> 5.1)
     spring (2.1.1)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -489,6 +495,7 @@ DEPENDENCIES
   rspec-rails (~> 5.0, >= 5.0.1)
   sass-rails (>= 6)
   selenium-webdriver
+  shrine (~> 3.3)
   spring
   spring-watcher-listen (~> 2.0, >= 2.0.1)
   sqlite3 (~> 1.4)

@@ -17,9 +17,12 @@ gem 'bootstrap-multiselect-rails', '~> 0.9.9'
 gem 'cloudinary', require: false
 gem 'activestorage-cloudinary-service'
 gem 'image_processing', '~> 1.12', '>= 1.12.1'
+gem 'shrine', '~> 3.3'
+
 gem 'figaro'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
+
 
 
 gem 'mini_magick'
