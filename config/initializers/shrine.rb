@@ -1,6 +1,19 @@
 require "shrine"
 require "shrine/storage/file_system"
 require "shrine/storage/memory"
+
+Cloudinary.config(
+cloud_name: ENV['dbvtiagbj'],
+api_key:    ENV['179144836251857'],
+api_secret: ENV['psP0l_diTxygwN_ze31xMESR810'],
+)
+
+
+Shrine.storages = {
+cache: Shrine::Storage::Cloudinary.new(prefix: "cache"), # for direct uploads
+store: Shrine::Storage::Cloudinary.new(prefix: "rails_uploads"),
+}
+
 if  Rails.env.test?
   Shrine.storages = {
     cache: Shrine::Storage::Memory.new,

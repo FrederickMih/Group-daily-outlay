@@ -18,6 +18,7 @@ gem 'cloudinary', require: false
 gem 'activestorage-cloudinary-service'
 gem 'image_processing', '~> 1.12', '>= 1.12.1'
 gem 'shrine', '~> 3.3'
+gem "shrine-cloudinary", "~> 1.1"
 
 gem 'figaro'
 gem 'will_paginate'

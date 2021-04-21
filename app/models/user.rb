@@ -10,6 +10,9 @@ class User < ApplicationRecord
   validates :name, presence: true, length: {maximum: 30}
   has_one_attached :avatar, dependent: :destroy
 
+ include ImageUploader::Attachment(:avatar)
+ validates :title, presence: true
+
  
   private
 
