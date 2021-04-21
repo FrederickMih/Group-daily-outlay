@@ -1,5 +1,4 @@
 <% provide(:title, "New Expense") %>
-<%# <%= render 'layouts/header'  %>
 <div class="card my-3 text-center">
   <div class="card-body px-5">
     <%= form_with model: @outlay, local: true do |form| %>
@@ -10,14 +9,7 @@
         <%= form.number_field :amount, class: 'form-control', placeholder: 'Amount'%>
       </div>
 
-
-     
-
-
-
-
-
-      <div class="input-group my-7">
+      <div class="input-group my-3">
         <div class="input-group-prepend">
           <%= form.label :group_id, class: 'input-group-text' %>
         </div>
