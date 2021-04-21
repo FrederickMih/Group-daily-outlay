@@ -1,21 +1,15 @@
+<% provide(:title, "Outlay") %>
+<% provide(:title, "Groups") %>
+<div class="card">
+</div>
+<div class="d-flex justify-content-center mt-3">
+  <%= will_paginate @post,renderer: BootstrapPagination::Rails %>
+</div>
+<div class="padding-for-new-entry">
+  <%= render @groups %>
+</div>
+<div class="bg-primary py-3" >
+  <%= link_to 'New Group', new_group_path, type: "button", class: "btn btn-outline-light w-75 mx-auto d-block py-3" %>
+</div>
 
-<h1>Groups</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-  
-  </tbody>
-</table>
-
-<br>
-
-
-<%= link_to 'New Group', new_group_path %>
+ 
