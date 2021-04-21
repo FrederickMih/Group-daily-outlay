@@ -1,13 +1,26 @@
-
-<p>
-  <strong>Name:</strong>
-  <%= @group.name %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @group.user_id %>
-</p>
-
-<%= link_to 'Edit', edit_group_path(@group) %> |
-<%= link_to 'Back', groups_path %>
+<% provide(:title, @group.name) %>
+<div class="card">
+  <div class="card-body d-flex align-items-center">
+    <%= display_icon(@group) %>
+    <h1 class="ml-3">Group: <%= @group.name %></h1>
+  </div>
+  <div class="card-footer">
+    Created by <%= @group.user.name %> on <%= creation_date(@group) %>
+  </div>
+</div>
+<div class="card mt-3">
+  <div class="card-body">
+    <h2>Expenses in this group: </h2>
+  </div>
+</div>
+<% @group.outlays.each do |out| %>
+  <div class="card w-75 mx-auto my-3">
+    <div class="card-body d-flex justify-content-between">
+      <span><%= out.name %></span>
+      <strong>$<%= out.amount%></strong>
+    </div>
+    <div class="card-footer">
+      Created by <%= out.author.name %> on <%= creation_date(out) %>
+    </div>
+  </div>
+<% end %>
