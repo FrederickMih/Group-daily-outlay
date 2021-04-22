@@ -3,10 +3,10 @@
 <div class="card">
 </div>
 <div class="d-flex justify-content-center mt-3">
-  <%= will_paginate @post,renderer: BootstrapPagination::Rails %>
+  <%= will_paginate @group,renderer: BootstrapPagination::Rails %>
 </div>
 <div class="padding-for-new-entry">
-  <%= render @forms %>
+  <%= render @groups %>
 </div>
 <div class="bg-primary py-3" >
   <%= link_to 'New Group', new_group_path, type: "button", class: "btn btn-outline-light w-75 mx-auto d-block py-3" %>
