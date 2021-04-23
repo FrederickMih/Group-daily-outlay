@@ -6,13 +6,13 @@
   </div>
 </div>
 <div class="d-flex justify-content-center mt-3">
-  <%= will_paginate @post,renderer: BootstrapPagination::Rails %>
+  <%= will_paginate @outlays,renderer: BootstrapPagination::Rails %>
 </div>
 <div class="padding-for-new-entry">
   <%= render @outlays %>
 </div>
 <div class="bg-primary py-3" >
-  <%= link_to 'New Outlay', new_outlay_path, type: "button", class: "btn btn-outline-light w-75 mx-auto d-block py-8" %>
+  <%= link_to 'New Outlay', new_outlay_path, type: "button", class: "btn btn-outline-light w-75 mx-auto d-block py-3" %>
 </div>
 
  

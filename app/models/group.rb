@@ -6,9 +6,11 @@ class Group < ApplicationRecord
 
    validates :name, presence: true, uniqueness: true, length: { minimum: 2, maximum: 50 }
    has_one_attached :icon, dependent: :destroy
+
+   scope :alphabetically, -> { order('name') }
   
 
    def display_image
-      icon.variant(resize_to_limit: [500, 500])
+      icon.variant(resize_to_limit: [400, 400])
    end
 end

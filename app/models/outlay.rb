@@ -5,4 +5,6 @@ class Outlay < ApplicationRecord
 
    validates :name, presence: true
    validates :amount, presence: true, numericality: {less_than: 20_000}
+
+   scope :recent_first, -> {order('creation_date DESC')}
 end
