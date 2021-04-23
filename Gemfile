@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.0.0'
+ruby '2.7.2'
 
 gem 'rails', '~> 6.1.3', '>= 6.1.3.1'
 gem 'sqlite3', '~> 1.4'
@@ -20,6 +20,7 @@ gem 'image_processing', '~> 1.12', '>= 1.12.1'
 gem 'figaro'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
+gem 'binding_of_caller', '~> 1.0'
 
 
 gem 'mini_magick'
