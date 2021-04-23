@@ -17,8 +17,12 @@ class OutlaysController < ApplicationController
   end
 
   def create
-    @outlay = current_user.outlays.build(outlay_params)
-      
+    # @outlay = current_user.outlays.build(outlay_params)
+     @outlay = Outlay.new(outlay_params)
+     @outlay.author_id = current_user.id
+     ids = params[:outlay][:group].reject(&:empty?)
+     groups = Group.find(ids)
+     @outlay.groups << groups
     if @outlay.save
       flash[:success] = ['Outlay Added']
        redirect_to outlays_path, notice: 'Group was successfully created'
@@ -27,27 +31,6 @@ class OutlaysController < ApplicationController
       redirect_back(fallback_location: new_outlay_path)
     end
   end
-
-
-
-
-
-
-
-  #   @outlay = Outlay.new(outlay_params)
-  #   @outlay.author_id = current_user.id
-  #   ids = params[:outlay][:group].reject(&:empty?)
-  #   groups = Group.find(ids)
-  #   @outlay.groups << groups
-  #   if @outlay.save
-  #     flash[:success] = ['Outlay Added']
-  #     redirect_to outlays_path
-  #   else
-  #     flash[:danger] = @outlay.errors.full_messages
-  #     redirect_back(fallback_location: new_outlay_path)
-  #   end
-  # end
-
 
   private
 
