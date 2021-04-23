@@ -3,11 +3,13 @@ class GroupsController < ApplicationController
 
   def index
     @groups = Group.includes(:user).paginate(page: params[:page], per_page: 3).order(:name).with_attached_icon
+     @skip_footer = true
   end
 
   # GET /groups/1 or /groups/1.json
   def show
     @group = Group.includes(:outlays, :user).find(params[:id])
+     @skip_footer = true
   end
 
   # GET /groups/new
@@ -30,6 +32,7 @@ class GroupsController < ApplicationController
       flash[:danger] = group.errors.full_messages
       redirect_back(fallback_location: new_group_path)
     end
+    
   end
 
   # PATCH/PUT /groups/1 or /groups/1.json

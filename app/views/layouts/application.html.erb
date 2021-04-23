@@ -49,9 +49,8 @@
     </div> 
 
       
-    <% unless action_name == "index"%>
-       <%= render 'home/footer' %>
-    <% end %>
+    
+    <%= render "home/footer" unless @skip_footer %>
 
    
 

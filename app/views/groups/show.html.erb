@@ -2,7 +2,7 @@
 <div class="card">
   <div class="card-body d-flex align-items-center">
     <%=(@group) %>
-    <h1 class="ml-3">Group: <%= @group.name %></h1>
+    <h3 class="ml-3">Group: <%= @group.name %></h3>
   </div>
   <div class="card-footer">
     Created by <%= @group.user.name %> on <%= creation_date(@group) %>
@@ -10,7 +10,7 @@
 </div>
 <div class="card mt-3">
   <div class="card-body">
-    <h2>Expenses in this group: </h2>
+    <h3>Expenses in this group: </h3>
   </div>
 </div>
 <% @group.outlays.each do |expense| %>
@@ -23,4 +23,6 @@
       Created by <%= expense.author.name %> on <%= creation_date(expense) %>
     </div>
   </div>
+  
 <% end %>
+ 

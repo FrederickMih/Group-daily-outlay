@@ -8,7 +8,7 @@
         <div class="input-group-prepend">
           <%= form.label :group_id, class: 'input-group-text' %>
         </div>
-        <%= form.collection_check_boxes(:group_ids, Group.all,:id, :name, {class: 'custom-select'}, {prompt: true}) %>
+        <%= form.collection_radio_buttons(:group_ids, Group.all,:id, :name, {class: 'custom-select'}, {prompt: true}) %>
       </div>
 
 
