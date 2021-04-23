@@ -5,7 +5,7 @@
         <span> <%= group.name %> </span>
         <% end %>
      <div class ="card-footer">
-        This group was created by <strong><%= group.name %></strong> on <% creation_date(group)=%>
+        Created by <strong><%=group.user.name %></strong> on <%= creation_date(group)%>
      </div>
   </div>
 </div>
