@@ -1,5 +1,5 @@
 class OutlaysController < ApplicationController
-     before_action :authenticate_user!
+  before_action :authenticate_user!
 
   def new
     @outlay = Outlay.new
@@ -18,14 +18,14 @@ class OutlaysController < ApplicationController
 
   def create
     # @outlay = current_user.outlays.build(outlay_params)
-     @outlay = Outlay.new(outlay_params)
-     @outlay.author_id = current_user.id
-     ids = params[:outlay][:group].reject(&:empty?)
-     groups = Group.find(ids)
-     @outlay.groups << groups
+    @outlay = Outlay.new(outlay_params)
+    @outlay.author_id = current_user.id
+    ids = params[:outlay][:group].reject(&:empty?)
+    groups = Group.find(ids)
+    @outlay.groups << groups
     if @outlay.save
       flash[:success] = ['Outlay Added']
-       redirect_to outlays_path, notice: 'Group was successfully created'
+      redirect_to outlays_path, notice: 'Group was successfully created'
     else
       flash[:danger] = @outlay.errors.full_messages
       redirect_back(fallback_location: new_outlay_path)

@@ -1,4 +1,4 @@
-require "active_support/core_ext/integer/time"
+require 'active_support/core_ext/integer/time'
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
@@ -33,7 +33,7 @@ Rails.application.configure do
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :cloudinary
 
-  CLOUDINARY_URL="cloudinary://677957218387247:1V136ij22eN8rgIHjUvlxgfz8C8@dxc1u5evw"
+  CLOUDINARY_URL = 'cloudinary://677957218387247:1V136ij22eN8rgIHjUvlxgfz8C8@dxc1u5evw'.freeze
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
@@ -80,8 +80,4 @@ Rails.application.configure do
   config.gem 'gravatar_image_tag'
 
   # config.assets.compile = false
- 
-  
-
-
 end
