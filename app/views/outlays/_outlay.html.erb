@@ -10,4 +10,12 @@
    <div>
     <%= creation_date(outlay) %>
   </div>
+
+
+  <div>
+      <%= link_to '<i class="small material-icons indigo-text darken-4">visibility</i>'.html_safe, outlay %>
+      <%= link_to '<i class="small material-icons teal-text darken-4">mode_edit</i>'.html_safe, edit_outlay_path(outlayl) %>
+      <%= link_to '<i class="small material-icons deep-orange-text accent-3">delete</i>'.html_safe, outlay, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+
 </div>
