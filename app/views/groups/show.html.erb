@@ -1,3 +1,4 @@
+<div class='card blue lighten-5'>
 <% provide(:title, @group.name) %>
 <div class="card">
   <div class="card-body d-flex align-items-center">
@@ -9,9 +10,16 @@
   </div>
 </div>
 <div class="card mt-3">
+
+  <div class="card-action right-align">
+    <%= link_to '<i class="small material-icons green-text darken-4">arrow_back</i>'.html_safe, groups_path %>
+    <%= edit_group_link(@group) %>
+    <%= delete_group_link(@group) %>
+  </div>
   <div class="card-body">
     <h3>Expenses in this group: </h3>
   </div>
+</div>
 </div>
 
 

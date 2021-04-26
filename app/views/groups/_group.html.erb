@@ -8,4 +8,12 @@
         Created by <strong><%=group.user.name %></strong><br/> On <%= creation_date(group)%>
      </div>
   </div>
+
+   <div>
+      <%= link_to '<i class="small material-icons indigo-text darken-4">visibility</i>'.html_safe, group %>
+      <% if group.user_id == current_user.id %>
+        <%= edit_group_link(group) %>
+        <%= delete_group_link(group) %>
+      <%  end  %>
+    </div>
 </div>
