@@ -11,8 +11,6 @@
 <div class="padding-for-new-entry">
   <%= render @outlays %>
 </div>
- 
-
 
  <div class="card text-center bg-primary">
   <div class="card-header">
@@ -28,3 +26,5 @@
   
 </div>
 </div>
+
+<%= render 'my_outlays', my_outlays: @most_recent_outlays %>

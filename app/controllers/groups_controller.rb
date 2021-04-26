@@ -1,6 +1,12 @@
 class GroupsController < ApplicationController
   before_action :set_group, only: %i[show edit update destroy]
 
+   # GET /groups/new
+  def new
+    @group = Group.new
+  end
+
+
   def index
     @groups = Group.includes(:user).paginate(page: params[:page], per_page: 3).order(:name).with_attached_icon
      @skip_footer = true
@@ -8,13 +14,10 @@ class GroupsController < ApplicationController
 
   # GET /groups/1 or /groups/1.json
   def show
-    @group = Group.includes(:outlays, :user).find(params[:id])
+    # @group = Group.includes(:outlays, :user).find(params[:id])
      @skip_footer = true
-  end
-
-  # GET /groups/new
-  def new
-    @group = Group.new
+     @group_outlays = @group.outlays.includes(:user)
+    #  @amount = @group_outlays.pluck(:amount).sum
   end
 
   # GET /groups/1/edit
@@ -66,6 +69,6 @@ class GroupsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def group_params
-    params.require(:group).permit(:name, :icon)
+    params.require(:group).permit(:name, :user_id, :icon)
   end
 end

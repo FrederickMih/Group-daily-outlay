@@ -6,6 +6,10 @@ class OutlaysController < ApplicationController
   end
 
   def index
+
+    @most_recent_outlays = my_outlays
+
+
     @outlays = Outlay.includes(groups: [icon_attachment: :blob]).paginate(page: params[:page], per_page: 3)
       .where('author_id=?', current_user.id).joins(:groups).order(:created_at)
        @skip_footer = true
@@ -18,7 +22,6 @@ class OutlaysController < ApplicationController
   end
 
   def create
-    @outlay = current_user.outlays.build(outlay_params)
     @outlay = Outlay.new(outlay_params)
     @outlay.author_id = current_user.id
     # ids = params[:outlay][:group].reject(&:empty?)
@@ -33,9 +36,32 @@ class OutlaysController < ApplicationController
     end
   end
 
+
+
+  def external_outlay
+    @external = my_outlays.left_joins(:outlay_groups).where('group_id IS NULL')
+    @total_outlay = @external.sum(:outlay)
+  end
+
+
+
   private
 
-  def outlay_params
-    params.require(:outlay).permit(:name, :amount)
+  def set_outlay
+    @outlay = Outlay.find(params[:id])
   end
+
+  def outlay_params
+    params.require(:outlay).permit(:name, :amount, :user_id, :group_ids)
+  end
+   
+  def show_group_id
+    params.require(:travel).permit(group_id)
+  end
+
+  def my_outlays
+    current_user.outlays.includes(:groups).recent_first
+  end
+
+
 end

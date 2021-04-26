@@ -1,10 +1,9 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.2'
+ruby '2.7.3'
 
 gem 'activestorage-cloudinary-service'
-gem 'binding_of_caller', '~> 1.0'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'bootstrap-multiselect-rails', '~> 0.9.9'
 gem 'cloudinary', require: false
@@ -21,9 +20,11 @@ gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
+gem 'sprockets-rails', '~> 3.2', '>= 3.2.2'
+gem 'jquery-rails'
 
 gem 'carrierwave', '~> 2.0'
-gem 'fog'
+# gem 'fog'
 gem 'mini_magick'
 
 group :development, :test do
