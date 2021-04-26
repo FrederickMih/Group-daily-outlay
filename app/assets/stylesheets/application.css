@@ -20,3 +20,21 @@
    color: #434b54;
    font-family: "lato", sans-serif;
  }
+
+ .group-img {
+   width: 80px;
+   height: 80px;
+   object-fit: cover;
+}
+
+.outlay_image_icon {
+  height:100px;
+  width: 100px;
+  padding: 0.3;
+}
+.avatar {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+}
+

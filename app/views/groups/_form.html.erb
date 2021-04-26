@@ -4,7 +4,6 @@
       <div class="card-content">
 
         <%= form_with(model: group) do |form| %>
-          <%= error_messages_for(group) %>
           <%= form.text_field :name, placeholder: 'Name' %>
           <%= form.file_field :icon %>
 
