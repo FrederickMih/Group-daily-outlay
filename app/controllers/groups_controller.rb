@@ -13,8 +13,8 @@ class GroupsController < ApplicationController
 
   def show
      @skip_footer = true
-     @group_outlays = @group.outlays.includes(:user)
-    #  @amount = @group_outlays.pluck(:amount).sum
+     @group = Group.includes(:outlays, :user).find(params[:id])
+    
   end
 
   def edit; end

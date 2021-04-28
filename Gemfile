@@ -22,6 +22,7 @@ gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 gem 'sprockets-rails', '~> 3.2', '>= 3.2.2'
 gem 'jquery-rails'
+gem 'activestorage-validator'
 
 gem 'carrierwave', '~> 2.0'
 # gem 'fog'

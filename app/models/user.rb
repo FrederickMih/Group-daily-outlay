@@ -5,11 +5,12 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :groups
+  has_many :groups, dependent: :destroy
   has_many :outlays, foreign_key: 'author_id', dependent: :destroy
 
-  validates :name, presence: true, length: { maximum: 30 }
+  validates :name, presence: true, uniqueness: true, length: { minimum: 3, maximum: 30 }
   has_one_attached :avatar, dependent: :destroy
+  
 
   # User Avatar Validation
   validates_integrity_of :avatar

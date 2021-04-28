@@ -4,7 +4,7 @@
       <div class="card-content">
 
         <%= form_with(model: outlay) do |form| %>
-          <%= error_messages_for(outlay) %>
+       
           <%= form.text_field :name, placeholder: 'Name' %>
           <%= form.text_field :amount, placeholder: 'Amount' %>
           <%= form.collection_check_boxes( :group_ids, Group.all, :id, :name ) %>
