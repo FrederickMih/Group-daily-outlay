@@ -3,9 +3,9 @@ require 'rails_helper'
 RSpec.describe Outlay, type: :model do
 
   describe 'associations' do
-    it { should belong_to (:User) }
+    it { should belong_to (:author) }
     it { should have_many (:outlays_groups ) }
-    it { should have_many (:groups).through {:outlays_groups} }
+    it { should have_many (:groups) }
   end   
 
      before(:example) do
