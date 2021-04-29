@@ -24,6 +24,26 @@ RSpec.describe User, type: :model do
       expect(user.valid?).to be true
    end
 
+   describe "associations" do
+      it { should have_many(:outlays)}
+      it {should have_many(:groups) }
+      it {should have_one_attached(:avatar)}
+   end
 
+   describe "validations for names" do
+      it { should validate_presence_of(:name)}
+      it {should validate_length_of(:name).is_at_least(3) }
+      it {should validate_length_of(:name).is_at_most(30) }
+   end
+
+   describe "validations for names" do
+      it { should validate_presence_of(:name)}
+      it {should validate_length_of(:name).is_at_least(3) }
+      it {should validate_length_of(:name).is_at_most(30) }
+   end
+
+   # describe "validations for author_id" do
+   #    it { should validate_length_of(:author_id).is_equal_to(5) }
+   # end
 
 end

@@ -10,6 +10,7 @@ class User < ApplicationRecord
 
   validates :name, presence: true, uniqueness: true, length: { minimum: 3, maximum: 30 }
   has_one_attached :avatar, dependent: :destroy
+  # validates :author_id, presence: true, uniqueness: {case_sensitive: false}, length: { is: 5 }
   
 
   # User Avatar Validation
