@@ -1,0 +1,13 @@
+---
+development:
+  cloud_name: 'dbvtiagbj'
+  api_key: '179144836251857'
+  api_secret: psP0l_diTxygwN_ze31xMESR810
+  enhance_image_tag: true
+  static_file_support: false
+test:
+  cloud_name: 'dbvtiagbj'
+  api_key: '179144836251857'
+  api_secret: 'psP0l_diTxygwN_ze31xMESR810'
+  enhance_image_tag: true
+  static_file_support: false

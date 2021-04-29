@@ -10,6 +10,6 @@ class Group < ApplicationRecord
   scope :alphabetically, -> { order('name') }
 
   def display_image
-    icon.variant(resize_to_limit: [400, 400])
+    icon.variant(resize_to_limit: [500, 500])
   end
 end

@@ -45,7 +45,7 @@ Rails.application.configure do
 
   CLOUDINARY_URL = 'cloudinary://677957218387247:1V136ij22eN8rgIHjUvlxgfz8C8@dxc1u5evw'.freeze
   # config.active_storage.service = :local
-  config.gem 'gravatar_image_tag'
+  
 
   # Mount Action Cable outside main process or domain.
   # config.action_cable.mount_path = nil

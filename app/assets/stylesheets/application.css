@@ -35,5 +35,28 @@
 
 
 .avatar {
-  border-radius: 50%;  
+  border-radius: 90%;  
+  height: 80px;
+  
+}
+
+.profile_img {
+  height: 225px;
+  width: 225px;
+}
+.profile_info {
+ font-size: 1rem;
+ margin-left: 0.5rem;
+}
+.profile_link:hover {
+  color: #14abb1;
+}
+/* .profile_icon {
+  border-radius: 100%;
+  border: 1px solid white;
+  padding: 0.2em;
+} */
+.pg-profile {
+  color: #0d2b52;
+  background-color: #021844;
 }

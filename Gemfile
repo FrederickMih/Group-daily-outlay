@@ -3,12 +3,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.3'
 
-gem 'activestorage-cloudinary-service'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'bootstrap-multiselect-rails', '~> 0.9.9'
-gem 'cloudinary', require: false
+gem 'cloudinary'
 gem 'devise', '~> 4.7', '>= 4.7.3'
-gem 'figaro'
 gem 'gravatar_image_tag', github: 'mdeering/gravatar_image_tag'
 gem 'image_processing', '~> 1.12', '>= 1.12.1'
 gem 'jbuilder', '~> 2.7'
