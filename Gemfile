@@ -22,7 +22,7 @@ gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
-gem 'bundler', '~> 2.2.16' 
+
 
 gem 'carrierwave', '~> 2.0'
 # gem 'fog'
