@@ -320,6 +320,7 @@ DEPENDENCIES
   activestorage-validator
   bootsnap (>= 1.4.4)
   bootstrap-multiselect-rails (~> 0.9.9)
+  bundler (~> 2.2.16)
   byebug
   capybara (>= 3.26)
   carrierwave (~> 2.0)
