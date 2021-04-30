@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.feature 'User authentications', type: :feature do
-   
   scenario 'should enter valid email and password to login and visit his profile page' do
     visit new_user_session_path
     fill_in :Email, with: 'mih@gmail.com'

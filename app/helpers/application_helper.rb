@@ -1,5 +1,5 @@
 module ApplicationHelper
-  def creation_date(dt)
-    dt.created_at.strftime('%d %b %Y')
+  def creation_date(mydate)
+    mydate.created_at.strftime('%d %b %Y')
   end
 end

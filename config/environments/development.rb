@@ -1,3 +1,5 @@
+# rubocop:disable Lint/ConstantDefinitionInBlock
+
 require 'active_support/core_ext/integer/time'
 
 Rails.application.configure do
@@ -81,3 +83,5 @@ Rails.application.configure do
 
   # config.assets.compile = false
 end
+
+# rubocop:enable Lint/ConstantDefinitionInBlock

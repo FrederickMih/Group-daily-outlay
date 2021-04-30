@@ -1,7 +1,7 @@
 require_relative 'boot'
 
 require 'rails/all'
-require File.expand_path('../boot', __FILE__)
+require File.expand_path('boot', __dir__)
 
 # require 'carrierwave'
 

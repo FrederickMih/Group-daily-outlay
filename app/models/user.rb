@@ -11,7 +11,6 @@ class User < ApplicationRecord
   validates :name, presence: true, uniqueness: true, length: { minimum: 3, maximum: 30 }
   has_one_attached :avatar, dependent: :destroy
   validates :avatar, blob: { content_type: :image }
- 
 
   def display_image
     avatar.variant(resize_to_limit: [500, 500])

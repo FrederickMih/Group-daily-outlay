@@ -1,3 +1,5 @@
+# rubocop:disable Lint/ConstantDefinitionInBlock
+
 require 'active_support/core_ext/integer/time'
 
 require File.expand_path('application', __dir__)
@@ -45,7 +47,6 @@ Rails.application.configure do
 
   CLOUDINARY_URL = 'cloudinary://677957218387247:1V136ij22eN8rgIHjUvlxgfz8C8@dxc1u5evw'.freeze
   # config.active_storage.service = :local
-  
 
   # Mount Action Cable outside main process or domain.
   # config.action_cable.mount_path = nil
@@ -127,3 +128,5 @@ Rails.application.configure do
 
   # config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 end
+
+# rubocop:enable Lint/ConstantDefinitionInBlock

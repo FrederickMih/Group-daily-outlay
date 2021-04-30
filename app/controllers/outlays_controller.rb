@@ -1,21 +1,20 @@
+# rubocop:disable Lint/UselessAssignment
+# rubocop:disable Lint/AssignmentInCondition
 class OutlaysController < ApplicationController
   before_action :authenticate_user!
 
   def new
     @outlay = Outlay.new
   end
-   
+
   def edit; end
 
   def index
-
     @most_recent_outlays = my_outlays
-
 
     @outlays = Outlay.includes(groups: [icon_attachment: :blob]).paginate(page: params[:page], per_page: 3)
       .where('author_id=?', current_user.id).joins(:groups).order(:created_at)
-       @skip_footer = true
-       
+    @skip_footer = true
   end
 
   def index_no_group
@@ -41,37 +40,32 @@ class OutlaysController < ApplicationController
     end
   end
 
-
-
   def update
-   if @outlay = update(outlay_params)
-    
-    if show_group_id[:group_id]
-      if @outlay.groups.empty?
-         @outlay.outlay_groups.create(show_group_id)
-      else
-        @outlay.outlay_groups.update(show_group_id)
+    if @outlay = update(outlay_params)
+
+      if show_group_id[:group_id]
+        if @outlay.groups.empty?
+          @outlay.outlay_groups.create(show_group_id)
+        else
+          @outlay.outlay_groups.update(show_group_id)
+        end
       end
+
+      redirect_to @outlay, notice: 'Outlay was successfully updated'
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
-  redirect_to @outlay, notice: 'Outlay was successfully updated'
-else
-  render :edit, status: :unprocessable_entity
-end
-end
-
-def destroy
-  @outlay.destroy
-  redirect_to outlays_path, notice: 'Outlay was successfully destroyed'
-end
-
+  def destroy
+    @outlay.destroy
+    redirect_to outlays_path, notice: 'Outlay was successfully destroyed'
+  end
 
   def external_outlay
     @external = my_outlays.left_joins(:outlay_groups).where('group_id IS NULL')
     @total_outlay = @external.sum(:amount)
   end
-
-
 
   private
 
@@ -82,7 +76,7 @@ end
   def outlay_params
     params.require(:outlay).permit(:name, :amount, :author_id, :group_ids)
   end
-   
+
   def show_group_id
     params.require(:outlay).permit(:group_id)
   end
@@ -90,6 +84,7 @@ end
   def my_outlays
     current_user.outlays.includes(:groups).recent_first
   end
-
-
 end
+
+# rubocop:enable Lint/UselessAssignment
+# rubocop:enable Lint/AssignmentInCondition

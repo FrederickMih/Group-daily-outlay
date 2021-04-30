@@ -5,16 +5,14 @@ class GroupsController < ApplicationController
     @group = Group.new
   end
 
-
   def index
     @groups = Group.includes(:user).paginate(page: params[:page], per_page: 3).order(:name).with_attached_icon
-     @skip_footer = true
+    @skip_footer = true
   end
 
   def show
-     @skip_footer = true
-     @group = Group.includes(:outlays, :user).find(params[:id])
-    
+    @skip_footer = true
+    @group = Group.includes(:outlays, :user).find(params[:id])
   end
 
   def edit; end
@@ -30,7 +28,6 @@ class GroupsController < ApplicationController
       flash[:danger] = group.errors.full_messages
       redirect_back(fallback_location: new_group_path)
     end
-    
   end
 
   def update

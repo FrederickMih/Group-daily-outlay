@@ -10,6 +10,4 @@ Rails.application.routes.draw do
   get 'external', to: 'outlays#external_outlay'
   get 'home/index'
   # root 'home#index'
-
-  
 end

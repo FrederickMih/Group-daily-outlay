@@ -29,5 +29,4 @@ RSpec.feature 'Outlay and Group', type: :feature do
     fill_in 'Confirm Password', with: 'password'
     click_on 'Register'
   end
-
 end

@@ -1,5 +1,5 @@
 module UsersHelper
-  def show_avatar(user)
+  def show_avatar(_user)
     if current_user.avatar.attached?
       image_tag current_user.avatar, class: 'avatar rounded_circle'
     else
