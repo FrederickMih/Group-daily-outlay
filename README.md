@@ -2,10 +2,10 @@
 
 > This is an awesome web application that permits you to registered items bought and their corresponding amount, which can equally be categorized into groups.
 
-![App Screenshot](./Group-daily-outlay/app/assets/images/screenshot10.png)
-![App Screenshot](./Group-daily-outlay/app/assets/images/screenshot11.png)
-![App Screenshot](./Group-daily-outlay/app/assets/images/screenshot12.png)
-![App Screenshot](./Group-daily-outlay/app/assets/images/screenshot13.png)
+![App Screenshot](./app/assets/images/screenshot10.png)
+![App Screenshot](./app/assets/images/screenshot11.png)
+![App Screenshot](./app/assets/images/screenshot12.png)
+![App Screenshot](./app/assets/images/screenshot13.png)
 
 
 The application has the following features:
