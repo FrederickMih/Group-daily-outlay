@@ -3,11 +3,11 @@ class CreateOutlays < ActiveRecord::Migration[6.1]
     create_table :outlays do |t|
       t.string :name
       t.integer :amount
-      t.bigint :user_id
+      t.bigint :author_id
 
       t.timestamps
     end
     add_index :outlays, :name
-    add_index :outlays, :user_id
+    add_index :outlays, :author_id
   end
 end
