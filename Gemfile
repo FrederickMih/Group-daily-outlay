@@ -12,7 +12,7 @@ gem 'gravatar_image_tag', github: 'mdeering/gravatar_image_tag'
 gem 'image_processing', '~> 1.12', '>= 1.12.1'
 gem 'jbuilder', '~> 2.7'
 gem 'jquery-rails'
-gem 'pg', '~> 1.2', '>= 1.2.3'
+gem 'pg'
 gem 'puma', '~> 5.0'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.1'
 gem 'rubocop', '~> 1.13'
@@ -24,7 +24,6 @@ gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 
 gem 'carrierwave', '~> 2.0'
-# gem 'fog'
 gem 'mini_magick'
 
 group :development, :test do
