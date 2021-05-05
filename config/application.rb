@@ -1,5 +1,4 @@
 require_relative 'boot'
-require 'sprockets/railtie'
 
 require 'rails/all'
 require File.expand_path('boot', __dir__)
@@ -10,7 +9,7 @@ if defined?(Bundler)
   # Bundler stuff
 end
 
-# Require the gems listed in Gemfile, including any gems
+Require#  the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
