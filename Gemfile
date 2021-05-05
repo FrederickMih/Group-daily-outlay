@@ -29,7 +29,7 @@ gem 'mini_magick'
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
-  # gem 'rspec-rails', '~> 5.0', '>= 5.0.1'
+  gem 'rspec-rails', '~> 5.0', '>= 5.0.1'
 end
 
 group :development do

@@ -148,11 +148,13 @@ GEM
     mime-types-data (3.2021.0225)
     mini_magick (4.11.0)
     mini_mime (1.0.3)
+    mini_portile2 (2.5.1)
     minitest (5.14.4)
     msgpack (1.4.2)
     netrc (0.11.0)
     nio4r (2.5.7)
-    nokogiri (1.11.3-x86_64-linux)
+    nokogiri (1.11.3)
+      mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
     orm_adapter (0.5.0)
     parallel (1.20.1)
@@ -309,7 +311,7 @@ GEM
     zeitwerk (2.4.2)
 
 PLATFORMS
-  x86_64-linux
+  ruby
 
 DEPENDENCIES
   activestorage-validator
@@ -351,4 +353,4 @@ RUBY VERSION
    ruby 2.7.2p137
 
 BUNDLED WITH
-   2.2.16
+   2.1.4
