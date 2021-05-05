@@ -12,7 +12,7 @@ class GroupsController < ApplicationController
 
   def show
     @skip_footer = true
-    @group = Group.includes(:outlays, :user).find(params[:id])
+    @group = Group.includes(:outlay, :user).find(params[:id])
   end
 
   def edit; end

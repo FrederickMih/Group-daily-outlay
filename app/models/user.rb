@@ -9,7 +9,6 @@ class User < ApplicationRecord
   has_one_attached :avatar
 
   validates :name, presence: true, uniqueness: true, length: { minimum: 3, maximum: 30 }
-  has_one_attached :avatar, dependent: :destroy
   validates :avatar, blob: { content_type: :image }
 
   def display_image
