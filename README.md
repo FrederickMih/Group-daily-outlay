@@ -1,6 +1,6 @@
 # Group My Daily Outlays
 
-> This is an awesome web application built with Ruby, Rails that permits you to register items bought and their corresponding amount, which can equally be categorized into groups.
+> This is an awesome web application built with Ruby on Rails that permits you to register items bought and their corresponding amount, which can equally be categorized into groups.
 
 ![App Screenshot](./app/assets/images/screenshot10.png)
 ![App Screenshot](./app/assets/images/screenshot11.png)
