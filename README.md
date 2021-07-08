@@ -1,6 +1,6 @@
 # Group My Daily Outlays
 
-> This is an awesome web application that permits you to registered items bought and their corresponding amount, which can equally be categorized into groups.
+> This is an awesome web application built with Ruby on Rails that permits you to register items bought and their corresponding amount, which can equally be categorized into groups.
 
 ![App Screenshot](./app/assets/images/screenshot10.png)
 ![App Screenshot](./app/assets/images/screenshot11.png)
@@ -29,7 +29,12 @@ The application has the following features:
 
 ## Live Demo
 
-[Group My Expenses](linkhere)
+[Group My Expenses](https://nameless-caverns-64323.herokuapp.com/)
+
+
+# Please used this repository for the live version if you find any issue in setting up the already reviewed repository in your local machine. Sorry I could not make a live version for the already reviewed repository.
+[(Please click here) Trace-my-expenses](https://github.com/FrederickMih/Trace-my-expenses/tree/feature-expenses)
+
 
 ## Getting Started
 

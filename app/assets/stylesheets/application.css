@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-/* @import "bootstrap";
-@import "bootstrap-multiselect"; */
 
 .logo {
   font-family: 'Pacifico', cursive;
@@ -51,11 +49,6 @@
 .profile_link:hover {
   color: #14abb1;
 }
-/* .profile_icon {
-  border-radius: 100%;
-  border: 1px solid white;
-  padding: 0.2em;
-} */
 .pg-profile {
   color: #0d2b52;
   background-color: #021844;

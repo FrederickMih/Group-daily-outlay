@@ -9,5 +9,4 @@ Rails.application.routes.draw do
   get 'outlays/index_no_group', to: 'outlays#index_no_group'
   get 'external', to: 'outlays#external_outlay'
   get 'home/index'
-  # root 'home#index'
 end
